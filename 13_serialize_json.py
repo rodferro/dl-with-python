@@ -25,6 +25,9 @@ model.add(Dense(1, kernel_initializer='uniform', activation='sigmoid'))
 model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
 
 # fit the model
+model.fit(X, y, epochs=150, batch_size=10, verbose=0)
+
+# evaluate the model
 scores = model.evaluate(X, y, verbose=0)
 print('%s: %.2f%%' % (model.metrics_names[1], scores[1] * 100))
 
