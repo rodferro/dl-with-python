@@ -55,4 +55,4 @@ print('Loaded model from disk')
 # evaluate loaded model on test data
 loaded_model.compile(loss='binary_crossentropy', optimizer='rmsprop', metrics=['accuracy'])
 score = loaded_model.evaluate(X, y, verbose=0)
-print('%s: %.2f%%' % (loaded_model.metrics_names[1], scores[1] * 100))
+print('%s: %.2f%%' % (loaded_model.metrics_names[1], score[1] * 100))
