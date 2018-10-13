@@ -7,9 +7,9 @@ import numpy as np
 # fix random seed for reproducibility
 np.random.seed(7)
 
-# load pima indians dataset
+# load dataset
 filename = 'pima-indians-diabetes.csv'
-dataset = np.loadtxt(filename, delimiter=",")
+dataset = np.loadtxt(filename, delimiter=',')
 
 # split into input (X) and output (y) variables
 X = dataset[:, :8]
@@ -21,7 +21,7 @@ model.add(Dense(12, input_dim=8, kernel_initializer='uniform', activation='relu'
 model.add(Dense(8, kernel_initializer='uniform', activation='relu'))
 model.add(Dense(1, kernel_initializer='uniform', activation='sigmoid'))
 
-# compile
+# compile model
 model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
 
 # fit the model
