@@ -102,3 +102,8 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+# Serialized models
+*.h5
+*.json
+*.yaml
