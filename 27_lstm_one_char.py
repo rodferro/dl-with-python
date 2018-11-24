@@ -9,7 +9,7 @@ from keras.utils import np_utils
 np.random.seed(7)
 
 # define the raw dataset
-alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 
 # create mapping of characters to integers (0-25) and the reverse
 char_to_int = dict((c, i) for i, c in enumerate(alphabet))
@@ -45,7 +45,7 @@ model.fit(X, y, epochs=500, batch_size=1, verbose=2)
 
 # summarize performance of the model
 scores = model.evaluate(X, y, verbose=0)
-print("Model Accuracy: %.2f%%" % (scores[1] * 100))
+print('Model Accuracy: %.2f%%' % (scores[1] * 100))
 
 # demonstrate some model predictions
 for pattern in dataX:
@@ -55,4 +55,4 @@ for pattern in dataX:
     index = np.argmax(prediction)
     result = int_to_char[index]
     seq_in = [int_to_char[value] for value in pattern]
-    print(seq_in, "->", result)
+    print(seq_in, '->', result)
